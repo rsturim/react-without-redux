@@ -1,11 +1,13 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 
 import { Segment, Form, Input, Button } from "semantic-ui-react";
 import { uniqueId } from "lodash";
 
 import { ContactContext } from "../context/ContactContext";
 
-function ContactForm() {
+import { useFormInput } from "../hooks/useFormInput";
+
+const ContactForm = () => {
     const name = useFormInput("");
     const email = useFormInput("");
 
@@ -48,24 +50,6 @@ function ContactForm() {
             </Form>
         </Segment>
     );
-}
-
-function useFormInput(initialValue) {
-    const [value, setValue] = useState(initialValue);
-
-    const handleChange = (e) => {
-        setValue(e.target.value);
-    };
-
-    const handleReset = () => {
-        setValue("");
-    };
-
-    return {
-        value,
-        onChange: handleChange,
-        onReset: handleReset,
-    };
-}
+};
 
 export default ContactForm;

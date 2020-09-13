@@ -5,7 +5,7 @@ import { CounterContextProvider } from "../context/CounterContext";
 import CounterDisplay from "../components/CounterDisplay";
 import CounterButtons from "../components/CounterButtons";
 
-function CounterView() {
+const CounterView = () => {
     return (
         <CounterContextProvider>
             <h3>Counter</h3>
@@ -15,6 +15,6 @@ function CounterView() {
             </Segment>
         </CounterContextProvider>
     );
-}
+};
 
 export default CounterView;

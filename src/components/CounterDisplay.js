@@ -3,7 +3,7 @@ import React, { useContext } from "react";
 import { Statistic } from "semantic-ui-react";
 import { CounterContext } from "../context/CounterContext";
 
-function CounterDisplay() {
+const CounterDisplay = () => {
     const [count] = useContext(CounterContext);
 
     return (
@@ -12,6 +12,6 @@ function CounterDisplay() {
             <Statistic.Label>Counter</Statistic.Label>
         </Statistic>
     );
-}
+};
 
 export default CounterDisplay;

@@ -4,7 +4,7 @@ import { Button } from "semantic-ui-react";
 
 import { CounterContext } from "../context/CounterContext";
 
-function CounterButtons() {
+const CounterButtons = () => {
     const [count, setCount] = useContext(CounterContext);
 
     const increment = () => {
@@ -32,6 +32,6 @@ function CounterButtons() {
             </Button.Group>
         </div>
     );
-}
+};
 
 export default CounterButtons;

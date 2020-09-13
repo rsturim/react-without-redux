@@ -4,7 +4,7 @@ import { Segment, Table, Button, Icon } from "semantic-ui-react";
 
 import { ContactContext } from "../context/ContactContext";
 
-function ContactTable() {
+const ContactTable = () => {
     // subscribe to the `contacts` state and access dispatch functions
     const [state, dispatch] = useContext(ContactContext);
     const [selectedId, setSelectedId] = useState();
@@ -68,6 +68,6 @@ function ContactTable() {
             </Table>
         </Segment>
     );
-}
+};
 
 export default ContactTable;

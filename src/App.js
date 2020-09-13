@@ -4,7 +4,7 @@ import { Container } from "semantic-ui-react";
 import CounterView from "./views/CounterView";
 import ContactView from "./views/ContactView";
 
-function App() {
+const App = () => {
     return (
         <Container>
             <h1>React without Redux</h1>
@@ -12,6 +12,6 @@ function App() {
             <ContactView />
         </Container>
     );
-}
+};
 
 export default App;
