@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 
 import { Segment, Form, Input, Button } from "semantic-ui-react";
-import _ from "lodash";
+import { uniqueId } from "lodash";
 
 import { ContactContext } from "../context/ContactContext";
 
@@ -16,7 +16,7 @@ function ContactForm() {
         dispatch({
             type: "ADD_CONTACT",
             payload: {
-                id: _.uniqueId(10),
+                id: uniqueId(10),
                 name: name.value,
                 email: email.value,
             },
